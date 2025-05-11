@@ -1,0 +1,21 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+nav {
+    background-color: rgb(93, 209, 110);
+}
+
+#logo {
+    width: 4em;
+}
+
+#sideNav {
+    float: right;
+    padding: 1em;   
+}
+
+li {
+    display: inline-block;
+}
