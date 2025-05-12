@@ -1,6 +1,7 @@
 *{
     margin: 0;
     padding: 0;
+    font-family: 'Trebuchet MS', sans-serif;
 }
 
 nav {
@@ -11,11 +12,24 @@ nav {
     width: 4em;
 }
 
-#sideNav {
-    float: right;
-    padding: 1em;   
+#aquaponics {
+    height: 18em;
+    width: 27em;
+    border: solid black 1px;
 }
 
-li {
-    display: inline-block;
+#container {
+    text-align: center;
 }
+
+#rationale {
+    text-align: justify;
+    width: 50%;   
+    margin: 4em auto;
+}
+
+#rationaleDesc {
+    margin-top: 2em;
+}
+
+

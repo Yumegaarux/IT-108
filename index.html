@@ -9,11 +9,85 @@
 <body>
     <nav>
         <img src="media/smartpond.png" id="logo">
-        <ul id="sideNav">
-            <li>Rationale</li>
-            <li>Water</li>
-        </ul>
     </nav>
-    <img src="https://preview.redd.it/kksd13hqj4p91.jpg?width=640&crop=smart&auto=webp&s=0080363c29249c28972773a1b5b7f3a388abf754">
+    <div id="container">
+        <h1>Smart Aquaponics Management System (SAMS) - IoT-Enabled, Control 
+  		Monitoring And Automation Platform</h1>
+        <br/>
+        <img src="https://i.ytimg.com/vi/Q0PHK-RVXz8/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLC1TkcTZbnl_-6OM4Gev4WXwxPSzQ" id="aquaponics">
+
+        <div id="rationale">
+            <h4>Rationale</h4>
+            <p id="rationaleDesc">The database architecture of the SmartPond System is designed to support efficient, 
+                time-based monitoring, storage, retrieval, and analysis of system parameters required for aquaponics operations. 
+                The system requires data acquisition from various sensors such as water turbidity sensor, multiple water level
+                sensors, pH level sensor, and electric conductivity (EC) or salinity sensor. The system also requires
+                inputs such as switching of manual or automatic controls, and
+                reviewing of batches through a web-based interface.
+                <br/><br/><br/>
+                A relational database model is adopted using MariaDB (through XAMPP) to ensure structured data management, 
+                fast query processing, and ease of integration with the Flask-based web application. This setup provides the 
+                flexibility and scalability required for future expansion, including new sensor types, automation rules, or user profiles.
+                <br/><br/><br/>
+                The architecture consists of multiple interrelated tables such as:
+            </p>
+                <ul>
+                    <br>
+                    <li>SensorData – Stores timestamped readings from all sensors for historical tracking and analysis.</li>
+                    <li>ActuatorLogs – Records actions taken by the system or user (e.g., pumps turned on/off, lights triggered).</li>
+                    <li>Users – Holds user credentials and roles for access control.</li>
+                    <li>Notifications – Logs alerts and scheduled messages (email/SMS) based on system thresholds.</li>
+                    <li>Settings/Thresholds – Stores user-defined conditions for automation and notification rules.</li>
+                    <li>Record Archive - where users can view details about past batches and reviews set by other/same users in the past for comparison purposes.</li>
+                </ul>
+            <p>
+                <br/>
+                This structure promotes data normalization, reduces redundancy, and enhances data integrity, 
+                which are critical in systems dealing with large volumes of time-series data. Furthermore, 
+                using MariaDB allows easy synchronization between backend control logic and user interfaces 
+                while supporting real-time updates.
+                <br/><br/>
+                By centralizing the data architecture, the system can perform 
+                intelligent decision-making (e.g., turning on aerators when dissolved oxygen is low), allow 
+                historical trend analysis (e.g., growth conditions vs. yield), and provide remote accessibility 
+                for end-users, thereby improving productivity and sustainability of the aquaponics system.
+            </p>
+        </div>
+        <div id="objectives">
+            <ol>
+                <li>Authentication
+                Store user credentials to ensure the user is authorized to use the system.
+                Ensure that the user is a member of the Department of Agriculture of Oton.
+                </li>
+                <li>Auditing
+                Track all activities of the system.
+                </li>
+                <li>Track System Parameters
+                Monitor and store periodic data from sensors such as salinity, pH level, water turbidity, and rainwater level.
+                </li>
+                <li>Centralized Fish and Plant Data
+                Store and organize data of fish and plants (e.g., fish species, plant species, fish name, plant name, etc).
+                </li>
+                <li>Aquaculture Life and Plant Growth Monitoring
+                Keep track of the growth stages of fishes and plants as well as their expected harvest time.
+                </li>
+                <li>Set Schedules
+                Allow users to manually set schedules of watering of plants and feeding of fishes (if needed).
+                </li>
+                <li>View Historical Data
+                Allow users to view calculated average aquaponics parameters on a specified date.
+                </li>
+                <li>Ensure Data Integrity and Consistency
+                Standardize entries such as species names, unit measurements, and system types, minimizing errors and maintaining reliable, consistent data.
+                </li>
+                <li>Notify User
+                Send Notifications to the user once the data collected is not within the set range of the parameters.
+                </li>
+                <li>Manage Notification
+                Allow users to delete notifications.
+                </li>
+            </ol>
+        </div>
+    </div>
 </body>
 </html>
