@@ -128,5 +128,7 @@ p {
     margin: 1rem 0;
     margin-bottom: -2rem;
     }
-
+    #img_DBA, #img_ERD {
+    max-width: 100%;
+}
 }
