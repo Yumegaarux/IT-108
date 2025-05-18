@@ -4,6 +4,10 @@
     font-family: 'Trebuchet MS', sans-serif;
 }
 
+body {
+    background-color: rgb(255, 255, 255);
+}
+
 nav {
     background-color: rgb(93, 209, 110);
 }
@@ -14,7 +18,7 @@ nav {
 
 #aquaponics {
     height: 18em;
-    width: 27em;
+    width: 30em;
     border: solid black 1px;
 }
 
@@ -32,4 +36,22 @@ nav {
     margin-top: 2em;
 }
 
+#objectives {
+    text-align: justify;
+    width: 50%;   
+    margin: 4em auto;
+}
 
+#objectives li {
+    margin-bottom: 1em;
+}
+
+#img_DBA{
+    width: 40em;
+    height: 40em;
+}
+
+#img_ERD{
+    width: 40em;
+    height: 40em;
+}

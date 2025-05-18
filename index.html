@@ -15,9 +15,9 @@
   		Monitoring And Automation Platform</h1>
         <br/>
         <img src="https://i.ytimg.com/vi/Q0PHK-RVXz8/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLC1TkcTZbnl_-6OM4Gev4WXwxPSzQ" id="aquaponics">
-
+        </br></br>
+        <h3>Rationale</h3>
         <div id="rationale">
-            <h4>Rationale</h4>
             <p id="rationaleDesc">The database architecture of the SmartPond System is designed to support efficient, 
                 time-based monitoring, storage, retrieval, and analysis of system parameters required for aquaponics operations. 
                 The system requires data acquisition from various sensors such as water turbidity sensor, multiple water level
@@ -33,12 +33,12 @@
             </p>
                 <ul>
                     <br>
-                    <li>SensorData – Stores timestamped readings from all sensors for historical tracking and analysis.</li>
-                    <li>ActuatorLogs – Records actions taken by the system or user (e.g., pumps turned on/off, lights triggered).</li>
-                    <li>Users – Holds user credentials and roles for access control.</li>
-                    <li>Notifications – Logs alerts and scheduled messages (email/SMS) based on system thresholds.</li>
-                    <li>Settings/Thresholds – Stores user-defined conditions for automation and notification rules.</li>
-                    <li>Record Archive - where users can view details about past batches and reviews set by other/same users in the past for comparison purposes.</li>
+                    <li><b>SensorData</b> – Stores timestamped readings from all sensors for historical tracking and analysis.</li>
+                    <li><b>ActuatorLogs</b> – Records actions taken by the system or user (e.g., pumps turned on/off, lights triggered).</li>
+                    <li><b>Users</b> – Holds user credentials and roles for access control.</li>
+                    <li><b>Notifications</b> – Logs alerts and scheduled messages (email/SMS) based on system thresholds.</li>
+                    <li><b>Settings/Thresholds</b> – Stores user-defined conditions for automation and notification rules.</li>
+                    <li><b>Record Archive</b> - where users can view details about past batches and reviews set by other/same users in the past for comparison purposes.</li>
                 </ul>
             <p>
                 <br/>
@@ -53,11 +53,13 @@
                 for end-users, thereby improving productivity and sustainability of the aquaponics system.
             </p>
         </div>
+        <h3>Objectives</h3>
         <div id="objectives">
             <ol>
-                <li>Authentication
-                Store user credentials to ensure the user is authorized to use the system.
-                Ensure that the user is a member of the Department of Agriculture of Oton.
+                <li>
+                    Authentication
+                    Store user credentials to ensure the user is authorized to use the system.
+                    Ensure that the user is a member of the Department of Agriculture of Oton.
                 </li>
                 <li>Auditing
                 Track all activities of the system.
@@ -87,6 +89,16 @@
                 Allow users to delete notifications.
                 </li>
             </ol>
+        </div>
+
+        <div id="databaseArch">
+            <img src="media/Database_Architecture_1.webp" id="img_DBA">
+        </div>
+
+        <h3>Entity Relationship Diagram</h3>
+
+        <div id="ERD">
+            <img src="media/ERD_SmartPond.webp" id="img_ERD">
         </div>
     </div>
 </body>
