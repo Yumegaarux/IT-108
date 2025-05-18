@@ -102,6 +102,23 @@ h3 {
     border-radius: 4px;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
+button {
+    padding: 0.8rem 2rem;
+    width: 80%;
+    background-color: #1b5e20;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-weight: 500;
+    font-size: 1rem;
+    cursor: pointer;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    margin-top: 1rem;
+}
+button:hover {
+    background-color: #134d1a;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
 
 ul, ol {
     padding-left: 2rem;
@@ -125,10 +142,13 @@ p {
         margin-bottom: 0;
     }
     #aquaponics {
-    margin: 1rem 0;
-    margin-bottom: -2rem;
+        margin: 1rem 0;
+        margin-bottom: -2rem;
     }
     #img_DBA, #img_ERD {
-    max-width: 100%;
-}
+        max-width: 100%;
+    }
+    button{
+        width: 100%;
+    }
 }
