@@ -72,12 +72,6 @@
                 <li>Centralized Fish and Plant Data
                 Store and organize data of fish and plants (e.g., fish species, plant species, fish name, plant name, etc).
                 </li>
-                <li>Aquaculture Life and Plant Growth Monitoring
-                Keep track of the growth stages of fishes and plants as well as their expected harvest time.
-                </li>
-                <li>Set Schedules
-                Allow users to manually set schedules of watering of plants and feeding of fishes (if needed).
-                </li>
                 <li>View Historical Data
                 Allow users to view calculated average aquaponics parameters on a specified date.
                 </li>
@@ -86,10 +80,86 @@
                 reliable, consistent data.
                 </li>
                 <li>Notify User
-                Send Notifications to the user once the data collected is not within the set range of the parameters.
+                Send Notifications to the user once the data collected is not within the set range of the parameters and Allow users to delete notifications.
                 </li>
-                <li>Manage Notification
-                Allow users to delete notifications.
+            </ol>
+        </div>
+
+        <h3>Queries</h3>
+        <div id="queries">
+            <ol>
+                <li>
+                Authenticate users or allow users to create an account.<br>
+                INSERT INTO users<br>
+                (lname,fname, username, user_password, email, contact_number)<br>
+                VALUES<br>
+                ('lname_example',
+                'fname_example',
+                'username_example',
+                'password_example',
+                'example@gmail.com',
+                '09112345678');
+                </li>
+
+                <li>
+                Track all activities of the system for auditing<br>
+                SELECT<br>
+                activity_archive.AAID AS log_id,<br>
+                users.username,<br>
+                activity_archive.activity,<br>
+                activity_archive.activityTS<br>
+                FROM<br>
+                activity_archive<br>
+                JOIN<br>
+                users ON users.userID = activity_archive.userID<br>
+                ORDER BY<br>
+                activity_archive.activityTS DESC;<br>
+                </li>
+
+                <li>
+                Monitor and store periodic data from sensors such as salinity, pH level, and rainwater level.<br>
+                SELECT<br>
+                s.sensorID,<br>
+                s.sensorName,<br>
+                sl.tankID,<br>
+                sl.data,<br>
+                sl.datetime<br>
+                FROM<br>
+                sensor_logs sl<br>
+                JOIN sensor s ON sl.sensorID = s.sensorID<br>
+                WHERE<br>
+                sl.datetime >= NOW()<br>
+                ORDER BY sl.datetime DESC;<br>
+                    <br>
+                </li>
+
+                <li>
+                Store and organize data of fish and plants e.g., fish species, plant species, fish name, plant name, etc<br>
+                <br>
+                Show all plants <br>
+                SELECT * FROM plant;<br>
+                <br>
+                Show all fish<br>
+                SELECT * FROM fish;
+                </li>
+
+                <li>
+                    Allow users to view calculated average aquaponics parameters on a specified date.<br>
+                    SELECT 
+                    *<br>
+                    FROM<br>
+                    record_archive<br>
+                    WHERE<br>
+                    recordTS = '2025-05-12 23:59:59';<br>
+                </li>
+
+                <li>
+                Notify User<br>
+                DELETE FROM notification<br>
+                WHERE<br>
+                notifID = 6;<br>
+                <br>
+                select * FROM notification;<br>
                 </li>
             </ol>
         </div>
