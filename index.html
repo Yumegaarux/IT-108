@@ -59,30 +59,53 @@
         <div id="objectives">
             <ol>
                 <li>
-                    Authentication
-                    Store user credentials to ensure the user is authorized to use the system.
-                    Ensure that the user is a member of the Department of Agriculture of Oton.
+                    <b style="color: black;">Authentication:</b>
+                    Store and verify user credentials to ensure that only authorized users from 
+                    the Department of Agriculture of Oton can access the system.
                 </li>
-                <li>Auditing
-                Track all activities of the system.
+                <li>
+                    <b style="color: black;">Auditing:</b>
+                    Track and log all user activities within the system for accountability and traceability.
                 </li>
-                <li>Track System Parameters
-                Monitor and store periodic data from sensors such as salinity, pH level, water turbidity, and rainwater level.
+                <li>
+                    <b style="color: black;">System Parameter Monitoring:</b>
+                    Periodically collect, monitor, and store data from sensors, including salinity,
+                    pH level, and rainwater level.
                 </li>
-                <li>Centralized Fish and Plant Data
-                Store and organize data of fish and plants (e.g., fish species, plant species, fish name, plant name, etc).
+                <li>
+                    <b style="color: black;">Centralized Fish and Plant Database:</b>
+                    Maintain a structured repository for fish and plant data, including species, 
+                    common names, and relevant biological information.
                 </li>
-                <li>View Historical Data
-                Allow users to view calculated average aquaponics parameters on a specified date.
+                <li>
+                    <b style="color: black;">Historical Data Viewing:</b>
+                    Allow users to access and review the average values of aquaponics parameters recorded on specified dates.
                 </li>
-                <li>Ensure Data Integrity and Consistency
-                Standardize entries such as species names, unit measurements, and system types, minimizing errors and maintaining 
-                reliable, consistent data.
+                <li>
+                    <b style="color: black;">Data Integrity and Consistency:</b>
+                    Standardize data inputs such as species names, unit measurements, and system types to 
+                    minimize errors and ensure reliable and consistent records.
                 </li>
-                <li>Notify User
-                Send Notifications to the user once the data collected is not within the set range of the parameters and Allow users to delete notifications.
+                <li>
+                    <b style="color: black;">User Notifications:</b>
+                    Notify users when collected parameter values fall outside the acceptable range, 
+                    and allow them to manage (e.g., delete) these notifications.
                 </li>
             </ol>
+        </div>
+
+
+        
+
+        <h3>Database Architecture</h3>
+        <div id="databaseArch">
+            <img src="media/DatabaseArchitecture.png" id="img_DBA">
+        </div>
+
+        
+        <h3>Entity Relationship Diagram</h3>
+        <div id="ERD">
+            <img src="media/ERD_SmartPond.webp" id="img_ERD">
         </div>
 
         <h3>Queries</h3>
@@ -162,19 +185,9 @@
                 select * FROM notification;<br>
                 </li>
             </ol>
-        </div>
-
-        <h3>Database Architecture</h3>
-        <div id="databaseArch">
-            <img src="media/DatabaseArchitecture.png" id="img_DBA">
-        </div>
-
-        
-        <h3>Entity Relationship Diagram</h3>
-        <div id="ERD">
-            <img src="media/ERD_SmartPond.webp" id="img_ERD">
             <a href="https://www.db-fiddle.com/f/o2ohcGVAgHZQg4teg1s9jW/1238" target="_blank"><button>DB Fiddle</button></a>
         </div>
+
     </div>
 </body>
 </html>
